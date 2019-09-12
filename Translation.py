@@ -15,7 +15,7 @@ app = Flask(__name__)
 @app.route('/translateenglish', methods=['GET'])
 def translateenglish():
     if request.method == 'GET':
-        text = request.args['textToTranslate']
+        text = request.form['text']
 
         params = {
         'key':'trnsl.1.1.20190902T115551Z.906ad44dda89b9c9.7f34373544729af9424560734269a2f63f949a8f',
