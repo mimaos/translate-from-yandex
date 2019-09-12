@@ -26,6 +26,6 @@ def translateenglish():
         r = requests.get('https://translate.yandex.net/api/v1.5/tr.json/translate', params=params)
 
         io = StringIO(r.text)
-        result = json.load(io)['text']
-        return result[0]
+        result = json.load(io)
+        return result
 
